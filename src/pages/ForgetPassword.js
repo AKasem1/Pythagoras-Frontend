@@ -14,7 +14,7 @@ const ForgetPassword = () => {
   const handleEmailSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:2025/user/forgetpassword', {
+      const response = await fetch('user/forgetpassword', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ const ForgetPassword = () => {
   const handleOtpSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:2025/user/otpverification', {
+      const response = await fetch('user/otpverification', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ const ForgetPassword = () => {
       return;
     }
     try {
-      const response = await fetch('http://localhost:2025/user/resetpassword', {
+      const response = await fetch('user/resetpassword', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

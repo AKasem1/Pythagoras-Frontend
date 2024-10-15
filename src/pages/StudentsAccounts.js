@@ -6,7 +6,7 @@ const StudentsAccounts = () => {
     const [students, setStudents] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:2025/admin/students', {
+        fetch('admin/students', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

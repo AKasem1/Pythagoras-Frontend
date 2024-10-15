@@ -19,7 +19,7 @@ function Course() {
     const token = Cookies.get('auth')? JSON.parse(Cookies.get('auth')).token: null;
 
     const getCourse = (courseId) => {
-        fetch(`http://localhost:2025/user/coursebyid/${courseId}`, {
+        fetch(`user/coursebyid/${courseId}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

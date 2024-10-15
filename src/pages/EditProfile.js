@@ -29,7 +29,7 @@ const EditProfile = () => {
     e.preventDefault();
     console.log('Form Data:', formData);
     try {
-        const response = await fetch(`http://localhost:2025/user/editprofile/${user._id}`, {
+        const response = await fetch(`user/editprofile/${user._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

@@ -19,7 +19,7 @@ const AddQuiz = () => {
 
 
   useEffect(() => {
-    fetch('http://localhost:2025/admin/grades', {
+    fetch('admin/grades', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ const AddQuiz = () => {
 
   const getCourses = async (grade_id) => {
     try {
-      const response = await fetch(`http://localhost:2025/admin/coursesbygrade/${grade_id}`, {
+      const response = await fetch(`admin/coursesbygrade/${grade_id}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ const AddQuiz = () => {
 
   const getLessons = async (course_id) => {
     try {
-      const response = await fetch(`http://localhost:2025/admin/lesson/${course_id}`, {
+      const response = await fetch(`admin/lesson/${course_id}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -132,7 +132,7 @@ const AddQuiz = () => {
     console.log('submitted questions:', questions);
     console.log('Form values:', formValues);
     try {
-      const response = await fetch(`http://localhost:2025/admin/addquiz`, {
+      const response = await fetch(`admin/addquiz`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

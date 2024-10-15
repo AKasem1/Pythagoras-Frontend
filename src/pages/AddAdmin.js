@@ -3,6 +3,8 @@ import Cookies from 'js-cookie';
 import CustomAlert from '../components/CustomAlert';
 
 const AddAdmin = () => {
+  const port = process.env.PORT
+  console.log("port: ", port)
   const [alert, setAlert] = useState({ message: '', type: '' });
   const token = Cookies.get('auth')? JSON.parse(Cookies.get('auth')).token: null;
   const [formValues, setFormValues] = useState({ 
@@ -31,7 +33,7 @@ const AddAdmin = () => {
     const adminData = { ...formValues };
     console.log(adminData);
     try {
-      const response = await fetch('http://localhost:2025/admin/addadmin', {
+      const response = await fetch('admin/addadmin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

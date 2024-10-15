@@ -28,7 +28,7 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
-    fetch('http://localhost:2025/admin/numofstudents', {
+    fetch('admin/numofstudents', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

@@ -21,7 +21,7 @@ export const Home = () => {
     }, 1500);
   }, []);
   useEffect(() => {
-    fetch('http://localhost:2025/user/grades', {
+    fetch('user/grades', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ const getCourses = async (value) => {
   console.log(grades);
   console.log(grade_id);
   try {
-    const response = await fetch(`http://localhost:2025/user/coursesbygrade/${grade_id}`, {
+    const response = await fetch(`user/coursesbygrade/${grade_id}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

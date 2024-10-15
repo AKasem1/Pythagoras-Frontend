@@ -13,7 +13,7 @@ const AddCourses = () => {
     const key = '94a510085448090374c9c304d4af9503';
 
     useEffect(() => {
-        fetch('http://localhost:2025/admin/grades', {
+        fetch('admin/grades', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ const AddCourses = () => {
         e.preventDefault();
         const gradeName = e.target.gradeName.value;
         try {
-            const response = await fetch('http://localhost:2025/admin/addgrade', {
+            const response = await fetch('admin/addgrade', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ const AddCourses = () => {
         e.preventDefault();
         console.log("submitted courses: ", courses);
         try {
-            const response = await fetch('http://localhost:2025/admin/addcourse', {
+            const response = await fetch('admin/addcourse', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -17,7 +17,7 @@ const AddPackage = () => {
     });
 
     useEffect(() => {
-        fetch('http://localhost:2025/admin/grades', {
+        fetch('admin/grades', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ const AddPackage = () => {
 
     const getModules = async (grade_id) => {
         try {
-           await fetch(`http://localhost:2025/admin/modulesbygrade/${grade_id}`, {
+           await fetch(`admin/modulesbygrade/${grade_id}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const AddPackage = () => {
 
     const getTeachers = async (module_id, index) => {
       try{
-        await fetch(`http://localhost:2025/admin/teachersbymodule/${module_id}`, {
+        await fetch(`admin/teachersbymodule/${module_id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ const AddPackage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:2025/admin/addpackage', {
+            const response = await fetch('admin/addpackage', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

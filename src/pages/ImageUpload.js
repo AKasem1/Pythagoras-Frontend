@@ -9,7 +9,7 @@ const ImageUpload = () => {
   const [key, setKey] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:2025/admin/imguploadkey', {
+    fetch('admin/imguploadkey', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

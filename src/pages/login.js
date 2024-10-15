@@ -30,7 +30,7 @@ const Login = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:2025/user/signup', {
+      const response = await fetch('user/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ const Login = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:2025/user/login', {
+      const response = await fetch('user/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

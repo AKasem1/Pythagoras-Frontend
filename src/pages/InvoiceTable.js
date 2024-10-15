@@ -14,7 +14,7 @@ const InvoiceTable = () => {
   useEffect(() => {
     console.log("Hi");
     const fetchCourse = async () => {
-      const response = await fetch(`http://localhost:2025/user/coursebyid/${courseId}`, {
+      const response = await fetch(`user/coursebyid/${courseId}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

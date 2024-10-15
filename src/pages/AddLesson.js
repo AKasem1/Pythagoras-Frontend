@@ -11,7 +11,7 @@ const AddLesson = () => {
   const [alert, setAlert] = useState({ message: '', type: '' });
 
   useEffect(() => {
-    fetch('http://localhost:2025/admin/grades', {
+    fetch('admin/grades', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ const AddLesson = () => {
   }, [token]);
 
   const getCourses = (gradeId) => {
-    fetch(`http://localhost:2025/admin/coursesbygrade/${gradeId}`, {
+    fetch(`admin/coursesbygrade/${gradeId}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ const AddLesson = () => {
     console.log(formValues);
     console.log(token);
     try {
-      const response = await fetch('http://localhost:2025/admin/addlesson', {
+      const response = await fetch('admin/addlesson', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

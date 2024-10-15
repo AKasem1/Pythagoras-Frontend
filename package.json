@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:2025",
+  "proxy": "https://effulgent-sprinkles-db844e.netlify.app/",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
